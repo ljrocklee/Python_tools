@@ -1,0 +1,32 @@
+DEVICE=eth0    #网卡名称
+HWADDR=00:0C:29:23:C8:07    #网卡的MAC地址
+TYPE=Ethernet
+UUID=79e63b78-a09e-46e7-b4a6-4113841fa536
+ONBOOT=no      #是否开机默认启动该网卡
+NM_CONTROLLED=yes    #是否使用额外的网管软件（暂且不谈）
+BOOTPROTO=static       #关键字dhcp表示使用DHCP协议，使用静态IP时修改为static或none均可
+IPADDR=192.168.1.100   #固定IP
+NETMASK=255.255.255.0  #子网掩码
+GATEWAY=192.168.1.254  #默认路由（需根据实际网络情况而定）
+#### 以下为一些可以省略的配置
+NETWORK=192.168.1.0   #网络号，系统会根据IP和MASK自动计算得出
+BROADCAST=192.168.1.255    #广播地址，系统会根据IP和MASK自动计算得出
+MTU=1000   #最大传输单元，默认为1500
+
+HWADDR=00:02:c9:03:00:31:78:f2
+mlx4_ib3
+
+DEVICE=eth0
+TYPE=Ethernet
+UUID=79e63b78-a09e-46e7-b4a6-4113841fa536
+ONBOOT=yes
+BOOTPROTO=static
+IPADDR=192.168.40.100
+NETMASK=255.255.255.0
+
+
+ggy@darkstar:~$ cat /etc/udev/rules.d/70-persistent-net.rules
+# PCI device 0x10ec:0x8139 (8139too)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:e0:4c:90:06:83", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+00:0C:29:D5:9A:DD
+

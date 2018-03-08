@@ -1,0 +1,2 @@
+yum provides ifconfig  查找哪里提供这个功能
+yum whatprovides rz  查找哪里提供这个功能
