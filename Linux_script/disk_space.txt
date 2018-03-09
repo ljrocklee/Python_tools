@@ -1,0 +1,7 @@
+# 查看磁盘情况.
+fdisk -l
+# 查找到新磁盘
+fdisk [path:/dev/sdb1]
+# 设置主分区和扩展分区, 最后输入"w" 保存
+# 格式化分区
+mkfs  -t ext4 /dev/sdb1
