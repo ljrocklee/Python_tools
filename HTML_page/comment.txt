@@ -1,0 +1,5 @@
+html表设计:
+
+43行,5列
+
+列:地区(region), IP, 每个ip的录音数(server callrecording), 每个地区的录音数(region callrecording), 总和(total)
